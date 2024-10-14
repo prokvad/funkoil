@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Funkoil</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="header__wrapper">
+                    <a href="/">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <div class="header__group">
+                        <form action="#">
+                            <input type="search" name="search" placeholder="Поиск по сайту" required>
+                            <button type="submit">
+                                <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M21.8124 13.1251C21.8124 14.2331 21.5941 15.3303 21.1701 16.354C20.7461 17.3777 20.1246 18.3078 19.3411 19.0913C18.5576 19.8748 17.6274 20.4963 16.6038 20.9203C15.5801 21.3444 14.4829 21.5626 13.3749 21.5626C12.2668 21.5626 11.1697 21.3444 10.146 20.9203C9.12229 20.4963 8.19215 19.8748 7.40865 19.0913C6.62516 18.3078 6.00366 17.3777 5.57963 16.354C5.15561 15.3303 4.93737 14.2331 4.93737 13.1251C4.93737 10.8873 5.82632 8.74124 7.40865 7.1589C8.99099 5.57656 11.1371 4.68761 13.3749 4.68761C15.6126 4.68761 17.7587 5.57656 19.3411 7.1589C20.9234 8.74124 21.8124 10.8873 21.8124 13.1251ZM20.2749 22.0126C18.0143 23.7676 15.1699 24.5951 12.3207 24.3266C9.47155 24.0582 6.83176 22.714 4.93877 20.5677C3.04578 18.4215 2.0419 15.6344 2.1315 12.774C2.22109 9.91362 3.39743 7.19488 5.42103 5.17127C7.44463 3.14767 10.1634 1.97134 13.0238 1.88174C15.8842 1.79215 18.6712 2.79603 20.8175 4.68902C22.9638 6.58201 24.3079 9.2218 24.5764 12.071C24.8448 14.9202 24.0173 17.7646 22.2624 20.0251L27.4936 25.2564C27.6318 25.3851 27.7426 25.5404 27.8195 25.7129C27.8963 25.8854 27.9376 26.0716 27.941 26.2604C27.9443 26.4492 27.9096 26.6368 27.8388 26.8119C27.7681 26.987 27.6628 27.146 27.5293 27.2796C27.3958 27.4131 27.2367 27.5184 27.0616 27.5891C26.8865 27.6598 26.699 27.6946 26.5101 27.6912C26.3213 27.6879 26.1351 27.6466 25.9626 27.5697C25.7901 27.4928 25.6349 27.382 25.5061 27.2439L20.2749 22.0126Z"
+                                        fill="#A0A0A0" />
+                                </svg>
+
+                            </button>
+                        </form>
+                        <div class="header__tel">
+                            <a href="#">
+                                8(86160)3-43-84
+                            </a>
+                            <span>Звонить: с 8:00 до 17:00</span>
+                        </div>
+                        <div class="header__soc">
+                            <a href="#">
+                                <svg width="46" height="46" viewBox="0 0 46 46" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_150_856)">
+                                        <path
+                                            d="M1.21035 22.7308C1.2093 26.5117 2.20492 30.2034 4.09809 33.4574L1.0293 44.5752L12.4959 41.5919C15.6674 43.305 19.2208 44.2027 22.8318 44.203H22.8413C34.7619 44.203 44.4655 34.578 44.4706 22.7477C44.4729 17.0151 42.225 11.6245 38.1409 7.56894C34.0575 3.5137 28.6268 1.27923 22.8404 1.27661C10.9184 1.27661 1.21545 10.901 1.21053 22.7308"
+                                            fill="url(#paint0_linear_150_856)" />
+                                        <path
+                                            d="M0.438086 22.7237C0.436855 26.6406 1.46816 30.4644 3.42883 33.8349L0.25 45.3512L12.1277 42.261C15.4004 44.0316 19.0851 44.9651 22.8346 44.9665H22.8442C35.1925 44.9665 45.2447 34.9953 45.25 22.7415C45.2521 16.8029 42.9234 11.2185 38.6934 7.01767C34.4628 2.81733 28.8378 0.502442 22.8442 0.5C10.4938 0.5 0.443008 10.4698 0.438086 22.7237ZM7.5117 33.2544L7.0682 32.5559C5.20387 29.6145 4.21984 26.2154 4.22125 22.7251C4.22512 12.5399 12.5789 4.25349 22.8513 4.25349C27.8259 4.25558 32.5009 6.17977 36.0173 9.67093C39.5334 13.1624 41.4682 17.8037 41.467 22.7401C41.4624 32.9253 33.1084 41.2128 22.8442 41.2128H22.8368C19.4947 41.211 16.2169 40.3205 13.3584 38.6375L12.6781 38.2372L5.62961 40.0709L7.5117 33.2544Z"
+                                            fill="url(#paint1_linear_150_856)" />
+                                        <path
+                                            d="M17.2439 13.4327C16.8245 12.5078 16.3831 12.4891 15.9843 12.4729C15.6577 12.4589 15.2843 12.46 14.9113 12.46C14.538 12.46 13.9313 12.5993 13.4186 13.1549C12.9053 13.7109 11.459 15.0546 11.459 17.7876C11.459 20.5206 13.4652 23.162 13.7448 23.5329C14.0249 23.9032 17.6178 29.6911 23.3082 31.9178C28.0374 33.7682 28.9998 33.4002 30.0262 33.3074C31.0528 33.2149 33.3387 31.964 33.805 30.6668C34.2717 29.3699 34.2717 28.2581 34.1318 28.0258C33.9919 27.7943 33.6185 27.6553 33.0586 27.3777C32.4988 27.1 29.7462 25.7559 29.2331 25.5705C28.7198 25.3853 28.3466 25.2928 27.9733 25.849C27.5999 26.4044 26.5278 27.6553 26.2011 28.0258C25.8746 28.3971 25.5478 28.4434 24.9882 28.1655C24.4279 27.8868 22.625 27.3009 20.4859 25.4086C18.8216 23.9362 17.698 22.1179 17.3714 21.5617C17.0448 21.0063 17.3364 20.7053 17.6171 20.4285C17.8687 20.1796 18.1772 19.7798 18.4574 19.4556C18.7365 19.1311 18.8297 18.8997 19.0163 18.5292C19.2032 18.1584 19.1097 17.834 18.9699 17.5561C18.8297 17.2783 17.7418 14.531 17.2439 13.4327Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_150_856" x1="2173.1" y1="4331.13" x2="2173.1"
+                                            y2="1.27661" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#1FAF38" />
+                                            <stop offset="1" stop-color="#60D669" />
+                                        </linearGradient>
+                                        <linearGradient id="paint1_linear_150_856" x1="2250.25" y1="4485.62"
+                                            x2="2250.25" y2="0.5" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#F9F9F9" />
+                                            <stop offset="1" stop-color="white" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_150_856">
+                                            <rect width="45" height="45" fill="white" transform="translate(0.25 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg width="38" height="38" viewBox="0 0 38 38" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_150_860)">
+                                        <path
+                                            d="M18.75 0.5C13.8446 0.5 9.13578 2.4503 5.66992 5.91848C2.20051 9.38804 0.250993 14.0934 0.25 19C0.25 23.9045 2.20117 28.6133 5.66992 32.0815C9.13578 35.5497 13.8446 37.5 18.75 37.5C23.6554 37.5 28.3642 35.5497 31.8301 32.0815C35.2988 28.6133 37.25 23.9045 37.25 19C37.25 14.0955 35.2988 9.38665 31.8301 5.91848C28.3642 2.4503 23.6554 0.5 18.75 0.5Z"
+                                            fill="url(#paint0_linear_150_860)" />
+                                        <path
+                                            d="M8.62405 18.8046C14.018 16.4551 17.6139 14.9061 19.4119 14.1576C24.5514 12.0206 25.618 11.6494 26.3147 11.6368C26.4679 11.6344 26.809 11.6722 27.0316 11.8522C27.2166 12.0039 27.2686 12.2092 27.2946 12.3533C27.3177 12.4972 27.3495 12.8253 27.3235 13.0814C27.046 16.0067 25.8406 23.1055 25.2278 26.3821C24.9705 27.7684 24.4589 28.2332 23.9646 28.2786C22.8893 28.3774 22.0741 27.5687 21.0335 26.8868C19.4061 25.8192 18.4869 25.155 16.9057 24.1135C15.0788 22.9098 16.264 22.2482 17.3046 21.1671C17.5763 20.8841 22.3112 16.5785 22.4008 16.188C22.4123 16.1391 22.4239 15.957 22.3141 15.861C22.2071 15.7648 22.0481 15.7977 21.9325 15.8238C21.7677 15.8608 19.1691 17.5801 14.1278 20.9815C13.3907 21.4885 12.723 21.7357 12.1217 21.7227C11.4626 21.7085 10.1908 21.3492 9.24554 21.0422C8.08929 20.6656 7.16718 20.4664 7.24811 19.8267C7.28858 19.4937 7.74819 19.1529 8.62405 18.8046Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_150_860" x1="1850.25" y1="0.5" x2="1850.25"
+                                            y2="3700.5" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#2AABEE" />
+                                            <stop offset="1" stop-color="#229ED9" />
+                                        </linearGradient>
+                                        <clipPath id="clip0_150_860">
+                                            <rect width="37" height="37" fill="white" transform="translate(0.25 0.5)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bot container">
+                <div class="header__mob">
+                    <a class="logo" href="/">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <button type="button">
+                        <svg width="17.209961" height="17.210205" viewBox="0 0 17.21 17.2102" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                Created with Pixso.
+                            </desc>
+                            <defs />
+                            <path id="Vector"
+                                d="M13.12 7.49C13.12 8.23 12.97 8.96 12.69 9.65C12.41 10.33 11.99 10.95 11.47 11.47C10.95 11.99 10.33 12.41 9.65 12.69C8.96 12.97 8.23 13.12 7.49 13.12C6.76 13.12 6.02 12.97 5.34 12.69C4.66 12.41 4.04 11.99 3.52 11.47C2.99 10.95 2.58 10.33 2.3 9.65C2.01 8.96 1.87 8.23 1.87 7.49C1.87 6 2.46 4.57 3.52 3.52C4.57 2.46 6 1.87 7.49 1.87C8.99 1.87 10.42 2.46 11.47 3.52C12.53 4.57 13.12 6 13.12 7.49ZM12.09 13.42C10.59 14.59 8.69 15.14 6.79 14.96C4.89 14.78 3.13 13.89 1.87 12.46C0.61 11.03 -0.06 9.17 0 7.26C0.06 5.35 0.84 3.54 2.19 2.19C3.54 0.84 5.35 0.06 7.26 0C9.17 -0.06 11.03 0.61 12.46 1.87C13.89 3.13 14.78 4.89 14.96 6.79C15.14 8.69 14.59 10.59 13.42 12.09L16.91 15.58C17 15.67 17.07 15.77 17.12 15.89C17.18 16 17.2 16.13 17.2 16.25C17.21 16.38 17.18 16.5 17.14 16.62C17.09 16.74 17.02 16.84 16.93 16.93C16.84 17.02 16.74 17.09 16.62 17.14C16.5 17.18 16.38 17.21 16.25 17.2C16.13 17.2 16 17.18 15.89 17.12C15.77 17.07 15.67 17 15.58 16.91L12.09 13.42Z"
+                                fill="#A0A0A0" fill-opacity="1.000000" fill-rule="evenodd" />
+                        </svg>
+
+                    </button>
+                </div>
+                <div class="burger-icon">
+                    <span></span>
+                </div>
+                <nav class="header__nav">
+                    <ul>
+                        <li>
+                            <a href="./about.html">О компании</a>
+                        </li>
+                        <li class="sub-item">
+                            Каталог
+                            <svg width="11" height="9" viewBox="0 0 11 9" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.75 0.5L5.25 7.5L9.75 0.5" stroke="black" />
+                            </svg>
+
+                            <ul class="sub-list">
+                                <li>
+                                    <a href="./catalog.html">Все масла</a>
+                                </li>
+                                <li>
+                                    <a href="./product.html">Трансмиссионные масла</a>
+                                </li>
+                                <li>
+                                    <a href="./product.html">Гидравлические масла</a>
+                                </li>
+                                <li>
+                                    <a href="./product.html">Моторные масла</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="./contacts.html">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="./partners.html">Партнерам</a>
+                        </li>
+                    </ul>
+                    <div class="header__bot-btn">
+                        <button class="dealer" type="button">Найти дилера</button>
+                        <button class="order" type="button">Заказать</button>
+                    </div>
+                </nav>
+
+            </div>
+        </header>
+        <main>
+            <section class="main-block">
+                <img class="bg-img" src="./img/main-img.png" alt="">
+                <div class="main-block__content container">
+                    <h1>Масло для<br> автомобилей <br><span>FUNKOIL</span></h1>
+                    <p>FUNKOIL - это линейка моторных, трансмиссионных и гидравлических масел.
+                        Продукт создан посредством глубоких технических консультаций с производителем аналогичной
+                        высококачественной продукции в Германии.
+                        Цель создания – импортозамещение.</p>
+                </div>
+            </section>
+            <section class="info indent">
+                <div class="info__wrapper container">
+                    <div class="info__content">
+                        <h2>FUNKOIL - это</h2>
+                        <p>Масло FUNKOIL  — это залог надежной работы основных агрегатов, таких как двигатель, мосты и
+                            коробки передач.</p>
+                        <p>Мы поставили перед собой цель- предложить высококачественные масла, использование которых
+                            позволяет достичь максимальных показателей и высокого КПД (защита деталей от износа,
+                            увеличение срока службы ТС, снижение эксплуатационных затрат).</p>
+                        <p>Масла FUNKOIL это лучшее решение для клиентов, которые предъявляют высокие требования к
+                            качеству.</p>
+                        <a href="./catalog.html">Подробнее о компании</a>
+                    </div>
+                    <img src="./img/info-img.png" alt="">
+                </div>
+            </section>
+            <section class="advantages">
+                <img class="bg-img" src="./img/adv-img2.png" alt="">
+                <div class="advantages__wrapper container">
+                    <h2 class="title">Наши преимущества</h2>
+                    <div class="advantages__container">
+                        <div class="advantages__card">
+                            <div class="advantages__img">
+                                <img class="bg-img" src="./img/adv-img.png" alt="">
+                            </div>
+                            <p>Достойная альтернатива дефицитным и дорогим оригинальным маслам.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="catalog-block indent container">
+                <h2 class="title">Каталог продукции</h2>
+                <p>От правильного выбора качественных смазочных материалов и технических жидкостей зависит срок службы каждого отдельно взятого узла или агрегата транспортного средства и его безопасность на дороге. Применение в рецептурах нашей продукции современных базовых и присадочных компонентов позволяет ей соответствовать самым жестким требованиям ведущих мировых автопроизводителей.</p>
+                <div class="swiper product-slider">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a href="./product.html" class="product-slide">
+                            <div class="product-slide__img">
+                                <img class="bg-img" src="./img/slider-img.png" alt="">
+                            </div>
+                            <h3>Моторные масла</h3>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="./product.html" class="product-slide">
+                            <div class="product-slide__img">
+                                <img class="bg-img" src="./img/slider-img.png" alt="">
+                            </div>
+                            <h3>Трансмиссионные масла</h3>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="./product.html" class="product-slide">
+                            <div class="product-slide__img">
+                                <img class="bg-img" src="./img/slider-img.png" alt="">
+                            </div>
+                            <h3>Гидравлические масла</h3>
+                        </a>
+                      </div>
+                      <div class="swiper-slide">
+                        <a href="./product.html" class="product-slide">
+                            <div class="product-slide__img">
+                                <img class="bg-img" src="./img/slider-img.png" alt="">
+                            </div>
+                            <h3>Гидравлические масла</h3>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <svg width="100.000000" height="100.000000" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <circle id="Ellipse 7" cx="50.000000" cy="50.000000" r="50.000000" fill="#EEEEEE" fill-opacity="1.000000"/>
+                            <path id="Vector 2" d="M61.5 36L32 51.5L61.5 63.5" stroke="#000000" stroke-opacity="1.000000" stroke-width="3.000000"/>
+                        </svg>
+                        
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg width="100.000000" height="100.000000" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <desc>
+                                    Created with Pixso.
+                            </desc>
+                            <defs/>
+                            <circle id="Ellipse 7" cx="50.000000" cy="50.000000" r="50.000000" fill="#EEEEEE" fill-opacity="1.000000"/>
+                            <path id="Vector 2" d="M34 34L63.5 49.5L34 61.5" stroke="#000000" stroke-opacity="1.000000" stroke-width="3.000000"/>
+                        </svg>
+                        
+                    </div>
+                  </div>
+            </section>
+            <section class="form">
+                <img class="bg-img" src="./img/form-img.png" alt="">
+                <div class="container">
+                    <div class="form__wrapper">
+                        <h2 class="title">Остались вопросы?</h2>
+                        <p>Заполните заявку на любую интересующую вас тему. Ваш вопрос будет немедленно отправлен менеджеру</p>
+                        <form action="">
+                            <div class="form__container">
+                                <div class="form__left">
+                                    <input type="text" name="name" required placeholder="Имя">
+                                    <input type="tel" name="phone" required placeholder="Телефон">
+                                    <input type="email" name="email" required placeholder="E-mail">
+                                    <input type="text" name="org" required placeholder="Название организации">
+                                </div>
+                                <div class="form__right">
+                                    <textarea rows="6" placeholder="Ваш вопрос"></textarea>
+                                    <input type="text" name="region" required placeholder="Регион">
+                                </div>
+                            </div>
+                            <div class="checkbox-group">
+                                <label class="control-label">
+                                <input class="control-input visually-hidden" type="checkbox" required>
+                                <span class="control-mark"></span>
+                            </label>
+                                <span>Я согласен на обработку моих персональных данных.</span>
+                            </div>
+                            <button type="submit">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__top container">
+                <div class="footer__group">
+                    <a href="/">
+                        <img src="./img/logo.svg" alt="">
+                    </a>
+                    <a href="tel:+7 (918) 691-23-91">+7 (918) 691-23-91</a>
+                    <a href="mailto:ooo-dominant@mail.ru">ooo-dominant@mail.ru</a>
+                </div>
+                    <ul>
+                        <li>
+                            <a href="./catalog.html">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="./product.html">Моторные масла</a>
+                        </li>
+                        <li>
+                            <a href="./product.html">Трансмиссионные масла</a>
+                        </li>
+                        <li>
+                            <a href="./product.html">Гидравлические масла</a>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <a href="./about.html">О компании</a>
+                        </li>
+                        <li>
+                            <a href="./contacts.html">Контакты</a>
+                        </li>
+                        <li>
+                            <a href="#">Юридическим лицам</a>
+                        </li>
+                        <li>
+                            <a href="#">Доставка и оплата</a>
+                        </li>
+                    </ul>
+            </div>
+            <div class="footer__bot">
+                <span>2024 © Все права защищены</span>
+            </div>
+        </footer>
+    </div>
+    <div class="modal dealer-modal">
+        <div class="container">
+            <div class="modal__wrapper">
+                <button class="close-modal" type="button">
+                    <svg width="24.000000" height="24.000000" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <desc>
+                                Created with Pixso.
+                        </desc>
+                        <defs>
+                            <pattern id="pattern_163_620" patternContentUnits="objectBoundingBox" width="1.000000" height="1.000000">
+                                <use xlink:href="#image163_62_0" transform="matrix(0.003333,0,0,0.003333,0,0)"/>
+                            </pattern>
+                            <image id="image163_62_0" width="300.000000" height="300.000000" xlink:href="data:image/png;base64,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"/>
+                        </defs>
+                        <rect id="image 16" width="24.000000" height="24.000000" fill="url(#pattern_163_620)" fill-opacity="1.000000"/>
+                    </svg>
+                    
+                </button>
+                <h2 class="title">Стать дилером</h2>
+                <form class="form__wrapper" action="">
+                    <div class="form__container">
+                        <div class="form__left">
+                            <input type="text" name="name" required placeholder="Имя">
+                            <input type="tel" name="phone" required placeholder="Телефон">
+                            <input type="email" name="email" required placeholder="E-mail">
+                            <input type="text" name="org" required placeholder="Название организации">
+                        </div>
+                        <div class="form__right">
+                            <input type="text" name="city" required placeholder="Город">
+                            <input type="text" name="address" required placeholder="Адрес">
+                            <textarea rows="5" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="control-label">
+                        <input class="control-input visually-hidden" type="checkbox" required>
+                        <span class="control-mark"></span>
+                    </label>
+                        <span>Я согласен на обработку моих персональных данных.</span>
+                    </div>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal dl-modal">
+        <div class="container">
+            <div class="modal__wrapper">
+                <button class="close-dl-modal" type="button">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 1L1 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M1 1L21 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                </button>
+                <h2 class="title">Стать дилером</h2>
+                <form class="form__wrapper" action="">
+                    <div class="form__container">
+                        <div class="form__left">
+                            <input type="text" name="name" required placeholder="Имя">
+                            <input type="tel" name="phone" required placeholder="Телефон">
+                            <input type="email" name="email" required placeholder="E-mail">
+                            <input type="text" name="org" required placeholder="Название организации">
+                        </div>
+                        <div class="form__right">
+                            <input type="text" name="city" required placeholder="Город">
+                            <input type="text" name="address" required placeholder="Адрес">
+                            <textarea rows="5" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="control-label">
+                        <input class="control-input visually-hidden" type="checkbox" required>
+                        <span class="control-mark"></span>
+                    </label>
+                        <span>Я согласен на обработку моих персональных данных.</span>
+                    </div>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal order-modal">
+        <div class="container">
+            <div class="modal__wrapper">
+                <button class="close-order-modal" type="button">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 1L1 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M1 1L21 21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    
+                </button>
+                <h2 class="title">Стать дилером</h2>
+                <form class="form__wrapper" action="">
+                    <div class="form__container">
+                        <div class="form__left">
+                            <input type="text" name="name" required placeholder="Имя">
+                            <input type="tel" name="phone" required placeholder="Телефон">
+                            <input type="email" name="email" required placeholder="E-mail">
+                            <input type="text" name="org" required placeholder="Название организации">
+                        </div>
+                        <div class="form__right">
+                            <input type="text" name="city" required placeholder="Город">
+                            <input type="text" name="address" required placeholder="Адрес">
+                            <textarea rows="5" placeholder="Ваш вопрос"></textarea>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="control-label">
+                        <input class="control-input visually-hidden" type="checkbox" required>
+                        <span class="control-mark"></span>
+                    </label>
+                        <span>Я согласен на обработку моих персональных данных.</span>
+                    </div>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
