@@ -130,4 +130,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
     orderModalClose.addEventListener('click', () => {
         modalHide();
     });
+
+
+    const serachBtn = document.querySelector('.search-btn');
+    const searchForm = document.querySelector('.header__search form');
+
+    serachBtn.addEventListener('click', () => {
+        searchForm.classList.toggle('active');
+    });
 });
